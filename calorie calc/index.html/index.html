@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>حاسبة السعرات الحرارية</title>
+</head>
+<body>
+    <header>
+        <h1>حاسبة السعرات الحرارية</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="cart.html">عربة التسوق</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>احسب السعرات الحرارية اليومية</h2>
+        <form id="calorieForm">
+            <label for="tdee">إجمالي السعرات الحرارية اليومية (TDEE):</label>
+            <input type="number" id="tdee" required>
+
+            <label for="mealDistribution">توزيع السعرات على الوجبات:</label>
+            <input type="number" id="breakfast" placeholder="الإفطار (%)" required>
+            <input type="number" id="lunch" placeholder="الغداء (%)" required>
+            <input type="number" id="dinner" placeholder="العشاء (%)" required>
+            <input type="number" id="snacks" placeholder="الوجبات الخفيفة (%)" required>
+
+            <button type="button" onclick="calculateCalories()">احسب</button>
+        </form>
+
+        <div id="result"></div>
+    </main>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
